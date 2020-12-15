@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="ArtistSearchResultCell" customModule="FlashProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Warframe" translatesAutoresizingMaskIntoConstraints="NO" id="0vq-xW-KBT">
+                        <rect key="frame" x="20" y="13" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="0tZ-TC-wyL"/>
+                            <constraint firstAttribute="height" constant="60" id="vhR-tL-Lwk"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="TLi-6s-Ypc">
+                        <rect key="frame" x="90" y="16.5" width="110.5" height="52.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwl-iV-upr">
+                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of fans:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ2-jk-CdW">
+                                <rect key="frame" x="0.0" y="34.5" width="110.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0vq-xW-KBT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5Nn-m6-ARy"/>
+                    <constraint firstItem="TLi-6s-Ypc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Pvv-O7-Eiz"/>
+                    <constraint firstItem="0vq-xW-KBT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="S39-mK-f7Q"/>
+                    <constraint firstItem="TLi-6s-Ypc" firstAttribute="leading" secondItem="0vq-xW-KBT" secondAttribute="trailing" constant="10" id="dbB-t2-7ri"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TLi-6s-Ypc" secondAttribute="trailing" constant="20" id="o6f-rZ-aWp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistname" destination="Wwl-iV-upr" id="IKA-CL-odX"/>
+                <outlet property="avatar" destination="0vq-xW-KBT" id="vn4-h1-NEX"/>
+                <outlet property="numberOfFans" destination="mJ2-jk-CdW" id="iWK-z2-gui"/>
+                <outlet property="stackView" destination="TLi-6s-Ypc" id="nox-CH-ejc"/>
+            </connections>
+            <point key="canvasLocation" x="107" y="66"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Warframe" width="300" height="168"/>
+    </resources>
+</document>

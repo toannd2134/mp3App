@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecentlyPlayedCell" customModule="FlashProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="242"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="215" height="242"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DOTA2" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-Cu-nnS">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="yB8-IM-PjM"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRL-m9-V0x">
+                        <rect key="frame" x="0.0" y="180" width="215" height="62"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-RU-VaP">
+                                <rect key="frame" x="8" y="4" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdy-1x-w7T">
+                                <rect key="frame" x="8" y="29" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sV0-RU-VaP" firstAttribute="leading" secondItem="eRL-m9-V0x" secondAttribute="leading" constant="8" id="4JF-vP-X01"/>
+                            <constraint firstItem="sV0-RU-VaP" firstAttribute="top" secondItem="eRL-m9-V0x" secondAttribute="top" constant="4" id="6OR-8I-ILo"/>
+                            <constraint firstItem="Xdy-1x-w7T" firstAttribute="leading" secondItem="eRL-m9-V0x" secondAttribute="leading" constant="8" id="XT6-hj-ozs"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sV0-RU-VaP" secondAttribute="trailing" constant="8" id="ZIj-Yi-3Wh"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xdy-1x-w7T" secondAttribute="trailing" constant="8" id="ln5-D2-Z4V"/>
+                            <constraint firstItem="Xdy-1x-w7T" firstAttribute="top" secondItem="sV0-RU-VaP" secondAttribute="bottom" constant="4" id="z7h-RH-oNh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="zCP-Cu-nnS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="12f-aB-6q7"/>
+                <constraint firstItem="eRL-m9-V0x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NRL-WU-rmA"/>
+                <constraint firstAttribute="trailing" secondItem="zCP-Cu-nnS" secondAttribute="trailing" id="S8d-8e-7NP"/>
+                <constraint firstItem="eRL-m9-V0x" firstAttribute="top" secondItem="zCP-Cu-nnS" secondAttribute="bottom" id="XKu-OC-wiY"/>
+                <constraint firstAttribute="trailing" secondItem="eRL-m9-V0x" secondAttribute="trailing" id="be3-Gt-qrU"/>
+                <constraint firstAttribute="bottom" secondItem="eRL-m9-V0x" secondAttribute="bottom" id="eLd-gh-N2I"/>
+                <constraint firstItem="zCP-Cu-nnS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gOZ-kw-oJo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="215" height="242"/>
+            <connections>
+                <outlet property="artistName" destination="Xdy-1x-w7T" id="CBm-ss-M6Q"/>
+                <outlet property="avatar" destination="zCP-Cu-nnS" id="g2l-jW-AzA"/>
+                <outlet property="trackTitle" destination="sV0-RU-VaP" id="3yq-32-KU3"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DOTA2" width="284" height="177"/>
+    </resources>
+</document>
